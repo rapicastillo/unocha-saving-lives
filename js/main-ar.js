@@ -559,7 +559,7 @@ function load_highcharts()
         yAxis : {
           opposite: true, 
           title : {
-            text : 'Billions of US$'
+            text : 'مليار دولار أمريكي'
           },
           min : 0,
           tickInterval: 2,
