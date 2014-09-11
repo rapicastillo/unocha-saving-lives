@@ -525,6 +525,8 @@ background: url('../img/ajax-loader.gif') center center no-repeat,         linea
     position: absolute;
     z-index: 99;
 }
+
+
 .front-page .spiral {
     width: 100%;
     height: 100%;
@@ -580,6 +582,14 @@ background: url('../img/ajax-loader.gif') center center no-repeat,         linea
     background: rgb(153,179,223);
     text-decoration: none;
 }
+
+.front-page .front-page-lang a
+{
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
 .family-circle {
     width: 220px;
     height: 220px;
