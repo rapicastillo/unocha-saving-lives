@@ -44,7 +44,7 @@ $(function() {
 				via: "unocha",
 				hashtags: "ReShapeAid",
 				text: show_text,
-        lang: "sp"
+        lang: "es"
 			});
 
 			win = window.open("https://twitter.com/intent/tweet?" + param, "twitter", "height=300,width=600,modal=yes,alwaysRaised=yes");
