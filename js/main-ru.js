@@ -440,7 +440,7 @@ function load_highcharts()
         },
         yAxis : {
           title : {
-            text : 'Millions of people'
+            text : 'Миллионы людей'
           },
           min : 0,
           tickInterval: 10,
@@ -549,7 +549,7 @@ function load_highcharts()
         },
         yAxis : {
           title : {
-            text : 'Billions of US$'
+            text : 'Миллиарды долларов'
           },
           min : 0,
           tickInterval: 2,
@@ -640,24 +640,24 @@ $(function() {
 
   var manifest=[
     //{id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-VdnsqGv/0/O/i-VdnsqGv.jpg", cycle_title: 2013, cycle_desc: "Conflict, Syria", cycle_credit: "OCHA/Gemma Connell"},
-    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-p3Hmmkv/0/O/i-p3Hmmkv.jpg", cycle_title: 2010, cycle_desc: "Flooding, Pakistan", cycle_credit: "UNHCR/Eduardo Diaz"},
-    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-dnqScD3/0/O/i-dnqScD3.jpg", cycle_title: 2013, cycle_desc: "Typhoon Haiyan, Philippines", cycle_credit: "OCHA/Joey Reyna"},
-    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-mSWcCTS/0/O/i-mSWcCTS.jpg", cycle_title: 2010, cycle_desc: "Flooding, Pakistan", cycle_credit: "UN Photo/UNICEF/ZAK"},
+    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-p3Hmmkv/0/O/i-p3Hmmkv.jpg", cycle_title: 2010, cycle_desc: "Наводнение , Пакистан", cycle_credit: "UNHCR/ Эдуардо Диас"},
+    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-dnqScD3/0/O/i-dnqScD3.jpg", cycle_title: 2013, cycle_desc: "Тайфун Хайян, Филиппины", cycle_credit: "OCHA/ Джои Рейна"},
+    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-mSWcCTS/0/O/i-mSWcCTS.jpg", cycle_title: 2010, cycle_desc: "Наводнение , Пакистан", cycle_credit: "Фотография OOН/UNICEF/ZAK"},
 //    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-p3Hmmkv/0/O/i-p3Hmmkv.jpg", cycle_title: 2010, cycle_desc: "Flooding, Pakistan", cycle_credit: "UNHCR/Eduardo Diaz"},
 //    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-PfHBLgX/0/O/i-PfHBLgX.jpg", cycle_title: 2012, cycle_desc: "Hurricane Sandy, Haiti", cycle_credit: "UN MINUSTAH/Logan Abassi"},
 //    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-t4cfwqn/0/O/i-t4cfwqn.jpg", cycle_title: 2012, cycle_desc: "Refugee camp, Iraq", cycle_credit: "UNHCR/Jerome Seregni"},
-    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-QNJTVDD/0/O/i-QNJTVDD.jpg", cycle_title: 2010, cycle_desc: "Refugee camp, Ethiopia", cycle_credit: "UN Photo/Eskinder Debebe"},
+    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-QNJTVDD/0/O/i-QNJTVDD.jpg", cycle_title: 2010, cycle_desc: "Лагерь беженцев, Эфиопия", cycle_credit: "Фотография OOН/ Эскиндер Дебебе"},
 //    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-CH5FSpB/0/O/i-CH5FSpB.jpg", cycle_title: 2011, cycle_desc: "Hurricane Sandy, Haiti", cycle_credit: "MINUSTAH/Logan Abassi"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-PCRzLCQ/0/O/i-PCRzLCQ.jpg", cycle_title: 2011, cycle_desc: "Floods, Pakistan", cycle_credit: "UNICEF/Asad Zaidi"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-PCRzLCQ/0/O/i-PCRzLCQ.jpg", cycle_title: 2011, cycle_desc: "Наводнение , Пакистан", cycle_credit: "UNICEF/ Асад Заиди"},
 //    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-Cp7ZprP/0/O/i-Cp7ZprP.jpg", cycle_title: 2010, cycle_desc: "Hurricane Sandy, Haiti", cycle_credit: "MINUSTAH/Logan Abassi"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-PRvSmT2/0/O/i-PRvSmT2.jpg", cycle_title: 2011, cycle_desc: "Floods, Pakistan", cycle_credit: "UNHCR/Eduardo Diaz"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-7Dzrj7p/0/O/i-7Dzrj7p.jpg", cycle_title: 2012, cycle_desc: "IDP camp, Sudan", cycle_credit: "UNAMID/Albert González Farran"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-PRvSmT2/0/O/i-PRvSmT2.jpg", cycle_title: 2011, cycle_desc: "Наводнение , Пакистан", cycle_credit: "UNHCR/ Эдуардо Диас"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-7Dzrj7p/0/O/i-7Dzrj7p.jpg", cycle_title: 2012, cycle_desc: "Лагерь для внутренне перемещенных лиц, Судан", cycle_credit: "UNAMID/ Альберт Гонсалес Фарран"},
 //    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-tztwTtQ/0/O/i-tztwTtQ.jpg", cycle_title: 2013, cycle_desc: "Conflict, Syria", cycle_credit: "OCHA/Gemma Connell"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-g5W3Q4t/0/O/i-g5W3Q4t.jpg", cycle_title: 2010, cycle_desc: "Floods, Mali", cycle_credit: "OCHA/Diakaridia Dembélé"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-GT5Wktb/0/O/i-GT5Wktb.jpg", cycle_title: 2013, cycle_desc: "Typhoon Haiyan, Philippines", cycle_credit: "UNHCR/R.Rocamora-Tacloban"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-mf9P2qB/0/O/i-mf9P2qB.jpg", cycle_title: 2013, cycle_desc: "Typhoon Haiyan, Philippines", cycle_credit: "OCHA/Gemma Cortes"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-g5W3Q4t/0/O/i-g5W3Q4t.jpg", cycle_title: 2010, cycle_desc: "Наводнение, Мали", cycle_credit: "OCHA/ Диакаридиа Дембеле"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-GT5Wktb/0/O/i-GT5Wktb.jpg", cycle_title: 2013, cycle_desc: "Тайфун Хайян, Филиппины", cycle_credit: "UNHCR/Р.Рокамора -Таклобан"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-mf9P2qB/0/O/i-mf9P2qB.jpg", cycle_title: 2013, cycle_desc: "Тайфун Хайян, Филиппины", cycle_credit: "OCHA/ Джемма Кортес"},
 //i-LK5KMP9
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-LK5KMP9/0/O/i-LK5KMP9.jpg", cycle_title: 2011, cycle_desc: "Refugee camp, Kenya", cycle_credit: "IOM/UNHCR/Brendan Bannon"}
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-LK5KMP9/0/O/i-LK5KMP9.jpg", cycle_title: 2011, cycle_desc: "Лагерь беженцев, Кения", cycle_credit: "IOM/UNHCR/Брендан Баннон"}
 
   ];
 
