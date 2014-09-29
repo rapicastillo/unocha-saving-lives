@@ -549,7 +549,7 @@ function load_highcharts()
         },
         yAxis : {
           title : {
-            text : 'billónes de dolares'
+            text : 'billónes de dólares'
           },
           min : 0,
           tickInterval: 2,
@@ -646,7 +646,7 @@ $(function() {
 //    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-p3Hmmkv/0/O/i-p3Hmmkv.jpg", cycle_title: 2010, cycle_desc: "Flooding, Pakistan", cycle_credit: "UNHCR/Eduardo Diaz"},
 //    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-PfHBLgX/0/O/i-PfHBLgX.jpg", cycle_title: 2012, cycle_desc: "Hurricane Sandy, Haiti", cycle_credit: "UN MINUSTAH/Logan Abassi"},
 //    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-t4cfwqn/0/O/i-t4cfwqn.jpg", cycle_title: 2012, cycle_desc: "Refugee camp, Iraq", cycle_credit: "UNHCR/Jerome Seregni"},
-    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-QNJTVDD/0/O/i-QNJTVDD.jpg", cycle_title: 2010, cycle_desc: "Campo de refugiados, Et iop ía", cycle_credit: "Foto ONU/Eskinder Debebe"},
+    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-QNJTVDD/0/O/i-QNJTVDD.jpg", cycle_title: 2010, cycle_desc: "Campo de refugiados, Etiopía", cycle_credit: "Foto ONU/Eskinder Debebe"},
 //    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-CH5FSpB/0/O/i-CH5FSpB.jpg", cycle_title: 2011, cycle_desc: "Hurricane Sandy, Haiti", cycle_credit: "MINUSTAH/Logan Abassi"},
     {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-PCRzLCQ/0/O/i-PCRzLCQ.jpg", cycle_title: 2011, cycle_desc: "Inundaciones, Pakistán", cycle_credit: "UNICEF/Asad Zaidi"},
 //    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-Cp7ZprP/0/O/i-Cp7ZprP.jpg", cycle_title: 2010, cycle_desc: "Hurricane Sandy, Haiti", cycle_credit: "MINUSTAH/Logan Abassi"},

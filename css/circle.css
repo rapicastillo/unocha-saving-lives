@@ -160,6 +160,11 @@ transform: scale(1);
 	border-top: 1px solid rgba(255,255,255,0.5);
 	}
 
+.circle-in-es .ch-info p
+{
+    font-size: 12px;
+}
+
 .ch-info p a {
 	display: block;
 	color: #fff;
