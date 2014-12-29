@@ -4,7 +4,7 @@ var Nav, DragReveal, app;
 $(function(){
 
     // Sometimes we force no-js mode for fallback version
-	if ($('html').hasClass('no-js')) return;
+  if ($('html').hasClass('no-js')) return;
 
     NoJsMode = function(){
         var obj = this;
@@ -28,32 +28,32 @@ $(function(){
 $( '.slideshow-third' ).cycle();
 
 $(function() {
-	var win;
-	$(".ch-info .ch-info-back, .twitter-logo").each(function(i, item) {
+  var win;
+  $(".ch-info .ch-info-back, .twitter-logo").each(function(i, item) {
 
-		$(this).bind("click", function() {
-			if (win)
-			{
-				win.close();
-			}
+    $(this).bind("click", function() {
+      if (win)
+      {
+        win.close();
+      }
 
-			show_text = $(this).find("p").text();
+      show_text = $(this).find("p").text();
 
-			var param = $.param({
-				url: "http://bit.ly/UhOAJU",
-				via: "unocha",
-				hashtags: "ReShapeAid",
-				text: show_text,
-        lang: 'fr'
-			});
+      var param = $.param({
+        url: "http://bit.ly/UhOAJU",
+        via: "unocha",
+        hashtags: "ReShapeAid",
+        text: show_text,
+        lang: 'ch'
+      });
 
-			win = window.open("https://twitter.com/intent/tweet?" + param, "twitter", "height=300,width=600,modal=yes,alwaysRaised=yes");
-			win.focus();
-		})
+      win = window.open("https://twitter.com/intent/tweet?" + param, "twitter", "height=300,width=600,modal=yes,alwaysRaised=yes");
+      win.focus();
+    })
 
 
-		//$(this).appendTo($link);
-	});
+    //$(this).appendTo($link);
+  });
 });
 
 
@@ -61,51 +61,51 @@ $(function() {
     PromoteLinks = function(el, clickOrHover){
         var obj = this;
         obj.el = $(el);
-		obj.button = obj.el.find('.promote-button');
+    obj.button = obj.el.find('.promote-button');
         obj.sharePanel = $('#share-panel');
         obj.shareBtn = obj.sharePanel.find('.button');
 
         this.init = function(){
-			if (clickOrHover == 'click') {
+      if (clickOrHover == 'click') {
                 obj.button.on('click', obj.onClick);
             } else {
                 obj.button.on('mouseenter', obj.onClick);
             }
-			obj.el.on('mouseleave', obj.close);
-			$('.auto-select', obj.el).on('click', function(){ $(this).select(); });
-			$(window).on('scroll', obj.onScroll).on('resize', obj.onResize);
+      obj.el.on('mouseleave', obj.close);
+      $('.auto-select', obj.el).on('click', function(){ $(this).select(); });
+      $(window).on('scroll', obj.onScroll).on('resize', obj.onResize);
 
-			obj.onResize();
-		};
-		this.onResize = function(){
-			var newTop = obj.el.height() * -1;
-			obj.el.css('top', newTop);
-		};
-		this.onScroll = function(){
-			if (obj.el.hasClass('open')) obj.close();
-		};
-		this.onClick = function(e){
-			e.preventDefault();
-			obj.setColor();
-			obj.el.toggleClass('open').toggleClass('ontop');
+      obj.onResize();
+    };
+    this.onResize = function(){
+      var newTop = obj.el.height() * -1;
+      obj.el.css('top', newTop);
+    };
+    this.onScroll = function(){
+      if (obj.el.hasClass('open')) obj.close();
+    };
+    this.onClick = function(e){
+      e.preventDefault();
+      obj.setColor();
+      obj.el.toggleClass('open').toggleClass('ontop');
 
-			if (obj.el.hasClass('wallpapers')) obj.populateLinks();
-		};
-		this.close = function(){
-			if (obj.el.hasClass('open')) obj.el.removeClass('open');
-		};
-		this.setColor = function(){
+      if (obj.el.hasClass('wallpapers')) obj.populateLinks();
+    };
+    this.close = function(){
+      if (obj.el.hasClass('open')) obj.el.removeClass('open');
+    };
+    this.setColor = function(){
             var bg = obj.button.css('backgroundColor');
             var color = obj.button.css('color');
             obj.el.css('background', bg).css('color', color);
             //obj.sharePanel.add(obj.shareBtn).css('background', bg).css('color', color);
         };
-		this.populateLinks = function(){
-			$('li a', obj.el).each(function(){
-				var size = $(this).attr('data-size');
-				$(this).attr('href', 'bond-img/'+size+'/c'+app.currPage+'.jpg'); //'bond-img/bond-download.php?file=bond-img/'+size+'/c'+app.currPage+'.jpg');
-			});
-		};
+    this.populateLinks = function(){
+      $('li a', obj.el).each(function(){
+        var size = $(this).attr('data-size');
+        $(this).attr('href', 'bond-img/'+size+'/c'+app.currPage+'.jpg'); //'bond-img/bond-download.php?file=bond-img/'+size+'/c'+app.currPage+'.jpg');
+      });
+    };
         this.init();
     };
 
@@ -145,7 +145,7 @@ $(function() {
         obj.el = $(el);
 
         this.prevCurr = 1;   // use this to calculate distance between cars when switching
-		this.active = [];
+    this.active = [];
 
         this.init = function(){
             obj.onResize(null);
@@ -154,8 +154,8 @@ $(function() {
         };
         this.onResize = function(wh){
             var ul = obj.el.find('ul');
-			var offset = (wh - ul.height() ) / 2;
-			ul.css('top', offset);
+      var offset = (wh - ul.height() ) / 2;
+      ul.css('top', offset);
         };
         this.onNavClick = function(e, n, speed){
             var n = n || $(e.target).closest('li').index()+1;
@@ -164,39 +164,39 @@ $(function() {
             if (Math.abs(obj.prevCurr - n)==1) obj.switchCar(n);
             obj.changePageTransition(n, speed);
         };
-		this.snapPointListener = function(){
+    this.snapPointListener = function(){
             var yPos = $(window).scrollTop();
-			var n = Math.floor(yPos / app.PAGEHEIGHT);
+      var n = Math.floor(yPos / app.PAGEHEIGHT);
             if (n == app.currPage) return;
 
             obj.switchCar(n);
         };
 
-		this.switchCar = function(n){
+    this.switchCar = function(n){
             obj.prevCurr = app.currPage;
             app.currPage = n;
-			obj.setActiveNavItem(n);
+      obj.setActiveNavItem(n);
             obj.setActiveCar(n);
-		};
-		this.goPrevious = function(){
-			if (app.currPage == 1) return;
-			app.currPage--;
-			obj.onNavClick(null, app.currPage);
-		};
-		this.goNext = function(){
-			if (app.currPage == app.numOfCars) return;
-			app.currPage++;
-			obj.onNavClick(null, app.currPage);
-		};
+    };
+    this.goPrevious = function(){
+      if (app.currPage == 1) return;
+      app.currPage--;
+      obj.onNavClick(null, app.currPage);
+    };
+    this.goNext = function(){
+      if (app.currPage == app.numOfCars) return;
+      app.currPage++;
+      obj.onNavClick(null, app.currPage);
+    };
 
         this.setActiveCar = function(n){
             if (Math.abs(obj.prevCurr - n)>1) return;
 
             app.aCars.eq(n).addClass('adjacent').removeClass('active');
-			if (n-2 >= 0) app.aCars.eq(n-2).addClass('adjacent').removeClass('active');
-			if (n-1 >= 0) app.aCars.eq(n-1).addClass('active').removeClass('adjacent');
-			// hide old adjacents, lower down the car stack - don't need to worry about ones above cos they are 0px x 0px
-			app.aCars.filter(':gt('+(n)+')').removeClass(' active adjacent');
+      if (n-2 >= 0) app.aCars.eq(n-2).addClass('adjacent').removeClass('active');
+      if (n-1 >= 0) app.aCars.eq(n-1).addClass('active').removeClass('adjacent');
+      // hide old adjacents, lower down the car stack - don't need to worry about ones above cos they are 0px x 0px
+      app.aCars.filter(':gt('+(n)+')').removeClass(' active adjacent');
         };
         this.setActiveNavItem = function(n){
             $('li', obj.el).removeClass('current').eq(n-1).addClass('current');
@@ -206,7 +206,7 @@ $(function() {
                 dirDown = (n > app.currPage) ? true : false,
                 distance = Math.abs(obj.prevCurr - n),
                 speed = (distance/4) * 2000,
-				carEase = (distance < 4) ? 'linear' : 'swing';
+        carEase = (distance < 4) ? 'linear' : 'swing';
 
             speed = (speed < 400) ? 400 : speed;    // min speed
             if (sp) speed = sp;
@@ -217,8 +217,8 @@ $(function() {
 
     app = {
 
-        PAGEHEIGHT:     1000,	// never change this, not unless you want to re-write ALL of your data-animations in your HTML
-		NOJSMODE:       false,
+        PAGEHEIGHT:     1000, // never change this, not unless you want to re-write ALL of your data-animations in your HTML
+    NOJSMODE:       false,
 
         numOfCars:      0,
         currPage:       0,
@@ -232,7 +232,7 @@ $(function() {
 
         init: function(){
 
-			app.preloadImages();
+      app.preloadImages();
 
             app.aCars = $('.car', app.carsLayer);
             app.numOfCars = app.aCars.length;
@@ -247,36 +247,38 @@ $(function() {
             // FALLBACK to no-js-mode if less than 960! - phones can't handle all the skrollr stuff
       if ($(window).width() < 960) {
 
-				new NoJsMode();
+        new NoJsMode();
 
-			} else {
+      } else {
 
                 var highcharts_box = $('#c2'),
                 boxDone = false,
                 boxRedrawn = false;
 
                 // DESKTOP Skrollr version
-				skrollr.init({
-					forceHeight: false,
-					render: function(){
+        skrollr.init({
+          forceHeight: false,
+          render: function(){
                         /* Prepare the charts when active */
                         if ( highcharts_box.hasClass('adjacent')) {
                             if ( ! boxDone ) {
                                 boxDone = true;
                               // load_highcharts();
-			    //   clear_highcharts();
+          //   clear_highcharts();
                             }
 
+          console.log("RELOAD");
 
-			    if (boxRedrawn)
-			    { clear_highcharts(); }
+          if (boxRedrawn)
+          { clear_highcharts(); }
                         }
 
                         /* Redraw the charts when the slide is active */
                         if (highcharts_box.hasClass('active')) {
                             if ( ! boxRedrawn ) {
                                 boxRedrawn = true;
-                                load_highcharts();
+                               load_highcharts();
+
                             }
                         }
                         else
@@ -286,17 +288,17 @@ $(function() {
 
 
 
-					}
-				});
+          }
+        });
 
-				// set body height
-				var bodyHeight = (app.numOfCars * app.PAGEHEIGHT) + (app.PAGEHEIGHT*2); // front page + hidden page
-				$('body').height(bodyHeight);
+        // set body height
+        var bodyHeight = (app.numOfCars * app.PAGEHEIGHT) + (app.PAGEHEIGHT*2); // front page + hidden page
+        $('body').height(bodyHeight);
 
-				// Instantiate CarNav, Draggables, Promote and share panels.
-				app.carsNav = new CarNav('#cars-nav');
-				$('.promote-panel').each(function(){ new PromoteLinks(this); });
-				$('.photo-mask-wrap').each(function(){ new DragReveal(this); });
+        // Instantiate CarNav, Draggables, Promote and share panels.
+        app.carsNav = new CarNav('#cars-nav');
+        $('.promote-panel').each(function(){ new PromoteLinks(this); });
+        $('.photo-mask-wrap').each(function(){ new DragReveal(this); });
 
                 $('#front-page').find('a, .family-circle').on('click', function(){
                     app.carsNav.onNavClick(null, 1, 1600);
@@ -312,9 +314,9 @@ $(function() {
                 $(window)
                     .on('scroll', app.onScroll)
                     .on('load', app.onLoad)
-					.on('resize', app.onResize);
-					app.onResize();		// do it now!
-			}
+          .on('resize', app.onResize);
+          app.onResize();   // do it now!
+      }
         },
         onScroll: function(){
             var yPos = $(window).scrollTop();
@@ -346,7 +348,7 @@ $(function() {
             // resize the nav
             app.carsNav.onResize(wh);
         },
-		onKeypress: function(e){
+    onKeypress: function(e){
             if ($('.embed.open').length) return;
             switch(e.keyCode){
                 case 37:    app.carsNav.goPrevious(); break;
@@ -407,6 +409,7 @@ function redraw_highcharts()
 
 function load_highcharts()
 {
+
   $(document).ready(function () {
     var chart1_opts = {
         chart : {
@@ -419,7 +422,7 @@ function load_highcharts()
           spacingRight: 20
         },
         title: {
-            text: 'Personnes dans le besoin',
+            text: '需要援助的人数（单位：百万）',
             align : 'left',
             style: {
                 color: 'rgb(85,85,85)',
@@ -437,7 +440,7 @@ function load_highcharts()
         },
         yAxis : {
           title : {
-            text : 'Millions de personnes'
+            text : '百万人'
           },
           min : 0,
           tickInterval: 10,
@@ -460,7 +463,7 @@ function load_highcharts()
         tooltip : {
           formatter : function () {
             return '<b>' + this.series.name + '</b><br/>' +
-            this.x + ': ' + this.y + ' millions';
+            this.x + ': ' + this.y + ' million';
           }
         },
         plotOptions : {
@@ -486,7 +489,7 @@ function load_highcharts()
         },
 
         series : [{
-            name : 'Personnes dans le besoin',
+            name : 'People in need',
             type : "area",
             fillColor : {
               linearGradient : [0, 0, 0, 300],
@@ -529,7 +532,7 @@ function load_highcharts()
 
         },
         title: {
-            text: 'Besoins de financement',
+            text: '所需资金（单位：十亿）',
             align : 'left',
             style: {
                 color: 'rgb(85,85,85)',
@@ -546,7 +549,7 @@ function load_highcharts()
         },
         yAxis : {
           title : {
-            text : 'Milliards de dollars US'
+            text : '十亿美元'
           },
           min : 0,
           tickInterval: 2,
@@ -568,7 +571,7 @@ function load_highcharts()
         tooltip : {
           formatter : function () {
             return '<b>' + this.series.name + '</b><br/>' +
-            this.x + ': ' + this.y + ' milliards';
+            this.x + ': ' + this.y + ' billion';
           }
         },
         plotOptions : {
@@ -594,7 +597,7 @@ function load_highcharts()
         },
 
         series : [{
-            name : 'Besoins de financement',
+            name : 'Funding requirements',
             type : "area",
             fillColor : {
               linearGradient : [0, 0, 0, 300],
@@ -637,24 +640,24 @@ $(function() {
 
   var manifest=[
     //{id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-VdnsqGv/0/O/i-VdnsqGv.jpg", cycle_title: 2013, cycle_desc: "Conflict, Syria", cycle_credit: "OCHA/Gemma Connell"},
-    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-p3Hmmkv/0/O/i-p3Hmmkv.jpg", cycle_title: 2010, cycle_desc: "Inondations, Pakistan", cycle_credit: "UNHCR/Eduardo Diaz"},
-    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-dnqScD3/0/O/i-dnqScD3.jpg", cycle_title: 2013, cycle_desc: "Typhon Haiyan, Philippines", cycle_credit: "OCHA/Joey Reyna"},
-    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-mSWcCTS/0/O/i-mSWcCTS.jpg", cycle_title: 2010, cycle_desc: "Inondations, Pakistan", cycle_credit: "UN Photo/UNICEF/ZAK"},
+    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-p3Hmmkv/0/O/i-p3Hmmkv.jpg", cycle_title: 2010, cycle_desc: "洪水，巴基斯坦", cycle_credit: "联合国难民署/ Eduardo Diaz"},
+    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-dnqScD3/0/O/i-dnqScD3.jpg", cycle_title: 2013, cycle_desc: "台风海燕，菲律宾", cycle_credit: "人道主义事务协调厅/ Joey Reyna"},
+    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-mSWcCTS/0/O/i-mSWcCTS.jpg", cycle_title: 2010, cycle_desc: "洪水，巴基斯坦", cycle_credit: "联合国照片/联合国儿童基金会/ZAK"},
 //    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-p3Hmmkv/0/O/i-p3Hmmkv.jpg", cycle_title: 2010, cycle_desc: "Flooding, Pakistan", cycle_credit: "UNHCR/Eduardo Diaz"},
 //    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-PfHBLgX/0/O/i-PfHBLgX.jpg", cycle_title: 2012, cycle_desc: "Hurricane Sandy, Haiti", cycle_credit: "UN MINUSTAH/Logan Abassi"},
 //    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-t4cfwqn/0/O/i-t4cfwqn.jpg", cycle_title: 2012, cycle_desc: "Refugee camp, Iraq", cycle_credit: "UNHCR/Jerome Seregni"},
-    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-QNJTVDD/0/O/i-QNJTVDD.jpg", cycle_title: 2010, cycle_desc: "Camp de réfugiés, Ethiopie", cycle_credit: "UN Photo/Eskinder Debebe"},
+    {id: "#slides-01-07-and-18", src: "http://ocha.smugmug.com/photos/i-QNJTVDD/0/O/i-QNJTVDD.jpg", cycle_title: 2010, cycle_desc: "难民营，埃塞俄比亚", cycle_credit: "联合国照片/ Eskinder Debebe"},
 //    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-CH5FSpB/0/O/i-CH5FSpB.jpg", cycle_title: 2011, cycle_desc: "Hurricane Sandy, Haiti", cycle_credit: "MINUSTAH/Logan Abassi"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-PCRzLCQ/0/O/i-PCRzLCQ.jpg", cycle_title: 2011, cycle_desc: "Inondations, Pakistan", cycle_credit: "UNICEF/Asad Zaidi"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-PCRzLCQ/0/O/i-PCRzLCQ.jpg", cycle_title: 2011, cycle_desc: "洪水，巴基斯坦", cycle_credit: "联合国儿童基金会/Asad Zaidi"},
 //    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-Cp7ZprP/0/O/i-Cp7ZprP.jpg", cycle_title: 2010, cycle_desc: "Hurricane Sandy, Haiti", cycle_credit: "MINUSTAH/Logan Abassi"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-PRvSmT2/0/O/i-PRvSmT2.jpg", cycle_title: 2011, cycle_desc: "Inondations, Pakistan", cycle_credit: "UNHCR/Eduardo Diaz"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-7Dzrj7p/0/O/i-7Dzrj7p.jpg", cycle_title: 2012, cycle_desc: "Camp de déplacés internes, Soudan", cycle_credit: "UNAMID/Albert GonzaÌlez Farran"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-PRvSmT2/0/O/i-PRvSmT2.jpg", cycle_title: 2011, cycle_desc: "洪水，巴基斯坦", cycle_credit: "联合国难民署/ Eduardo Diaz"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-7Dzrj7p/0/O/i-7Dzrj7p.jpg", cycle_title: 2012, cycle_desc: "境内流离失所者营地，苏丹", cycle_credit: "非洲联盟—联合国达尔富尔混合行动/ Albert González Farran"},
 //    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-tztwTtQ/0/O/i-tztwTtQ.jpg", cycle_title: 2013, cycle_desc: "Conflict, Syria", cycle_credit: "OCHA/Gemma Connell"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-g5W3Q4t/0/O/i-g5W3Q4t.jpg", cycle_title: 2010, cycle_desc: "Inondations, Mali", cycle_credit: "OCHA/Diakaridia Dembélé"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-GT5Wktb/0/O/i-GT5Wktb.jpg", cycle_title: 2013, cycle_desc: "Typhon Haiyan, Philippines", cycle_credit: "UNHCR/R.Rocamora-Tacloban"},
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-mf9P2qB/0/O/i-mf9P2qB.jpg", cycle_title: 2013, cycle_desc: "Typhon Haiyan, Philippines", cycle_credit: "OCHA/Gemma Cortes"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-g5W3Q4t/0/O/i-g5W3Q4t.jpg", cycle_title: 2010, cycle_desc: "洪水，马里", cycle_credit: "人道主义事务协调厅/ Diakaridia Dembélé"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-GT5Wktb/0/O/i-GT5Wktb.jpg", cycle_title: 2013, cycle_desc: "台风海燕，菲律宾", cycle_credit: "联合国难民署/ R.Rocamora-Tacloban"},
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-mf9P2qB/0/O/i-mf9P2qB.jpg", cycle_title: 2013, cycle_desc: "台风海燕，菲律宾", cycle_credit: "人道主义事务协调厅/ Gemma Cortes"},
 //i-LK5KMP9
-    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-LK5KMP9/0/O/i-LK5KMP9.jpg", cycle_title: 2011, cycle_desc: "Camp de réfugiés, Kenya", cycle_credit: "IOM/UNHCR/Brendan Bannon"}
+    {id: "#slides-08-17", src: "http://ocha.smugmug.com/photos/i-LK5KMP9/0/O/i-LK5KMP9.jpg", cycle_title: 2011, cycle_desc: "难民营，肯尼亚", cycle_credit: "国际移民组织/联合国难民署/ Brendan Bannon"}
 
   ];
 
@@ -671,17 +674,17 @@ $(function() {
 /*      if (current_id == "")
       {
         current_id = event.item.id;
-	var $target = $(current_id).closest(".cycle-slideshow");
-	$target.cycle("reinit");
+  var $target = $(current_id).closest(".cycle-slideshow");
+  $target.cycle("reinit");
       }
       else
       {
         if ( current_id != event.item.id )
- 	{
-	  var $target = $(current_id).closest(".cycle-slideshow");
-	  $target.cycle("reinit");
-	  curent_id = event.item.id;
-	}
+  {
+    var $target = $(current_id).closest(".cycle-slideshow");
+    $target.cycle("reinit");
+    curent_id = event.item.id;
+  }
       }
 */
       var image = event.result;
@@ -704,7 +707,7 @@ $(function() {
           $target.cycle("reinit");
           current_id = event.item.id;
 
-	  $target = $(current_id).closest(".cycle-slideshow");
+    $target = $(current_id).closest(".cycle-slideshow");
           $target.cycle("reinit");
         }
       }
